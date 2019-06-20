@@ -28,8 +28,7 @@ def how_long_month(numbers=[], who_call=None, id_process=None, work_time=(8, 18)
                 except ValueError:
                     internet_result += int(j[3].split('Kb')[0])
         result.append(
-            f'{number.number} - Проговорил {round(time_result / 3600, 2)} часа,'
-            f' Интернета потратил {round(internet_result / 1024, 2)} Mb \n')
+            f'{number.number} - Проговорил {round(time_result / 3600, 2)} часа, Интернета потратил {round(internet_result / 1024, 2)} Mb \n')
 
     return result
 
