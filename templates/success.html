@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block success %}
+<ul class="list-group">
+    <li class="list-group-item list-group-item-action active ">Результаты</li>
+{% for result in results %}
+    <ul class="list-group">
+        <a href="#" class="list-group-item list-group-item-action ">
+    {{ result }}
+  </a>
+
+    </ul>
+{% endfor %}
+{% endblock %}
