@@ -39,7 +39,7 @@ class Numbers(models.Model):
 
 class User:
     # class for save data, to check numbers
-    def __init__(self, number, id_process):
+    def __init__(self, number, id_process=1):
         self.number = number
         self.id_process = id_process
         # data[0] - date, data[1] - time, data[2] = who_call, data[3] - how_long
