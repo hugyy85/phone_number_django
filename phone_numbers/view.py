@@ -15,7 +15,7 @@ def upload_file(request):
     args.update(csrf(request))
 
     # разделение на отдельные вызовы (процессы) в базе данных
-    id_process = find_last_id()
+#     id_process = find_last_id()
 
     if request.method == 'POST':
 
@@ -23,8 +23,8 @@ def upload_file(request):
 
         if form.is_valid():
             files = request.FILES.getlist('file')
-            numbers = parse_phones(files, id_process)
-            results = how_long_month(numbers, id_process)
+            numbers = parse_phones(files)
+            results = how_long_month(numbers)
 
             return render_to_response('success.html', context={'results': results})
     else:
