@@ -5,7 +5,7 @@ from .forms import UploadFileForm
 from .models import UploadFile, Numbers, Names, User
 from django.template.context_processors import csrf
 import re, bs4
-from .query import find_last_id, how_long_month
+from .query import how_long_month
 import gc
 
 
