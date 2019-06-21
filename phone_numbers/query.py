@@ -3,12 +3,12 @@ import re
 import bs4
 
 
-def find_last_id():
-    query = Numbers.objects.values('id_process').order_by('-id_process')[0]
-    return query['id_process'] + 1
+# def find_last_id():
+#     query = Numbers.objects.values('id_process').order_by('-id_process')[0]
+#     return query['id_process'] + 1
 
 
-def how_long_month(numbers=[], who_call=None, id_process=None, work_time=(8, 18)):
+def how_long_month(numbers=[], who_call=None, id_process=1, work_time=(8, 18)):
     result = []
 
     # query = Numbers.objects.all().filter(id_process=id_process, number=number)
@@ -43,15 +43,6 @@ def parse_phones(files=[], id_process=1):
 
         for row in rows:
             res = row.contents
-            # nm = Names(number=num[0])
-            # rw = Numbers(number=nm,
-            #              date=res[1].next,
-            #              time=res[2].next,
-            #              who_call=res[4].next,
-            #              how_long=res[9].next,
-            #              id_process=id_process)
-            # nm.save()
-            # rw.save()
             num.data.append([res[1].next, res[2].next, res[4].next, res[9].next])
 
         numbers.append(num)
