@@ -3,7 +3,7 @@ import re
 import bs4
 
 
-def how_long_month(numbers=[], details=False, id_process=1, work_time=(8, 18)):
+def how_long_month(numbers=[], details=False, id_process=1, work_time=(0, 24)):
     data_storage = {}
     # query = Numbers.objects.all().filter(id_process=id_process, number=number)
 
