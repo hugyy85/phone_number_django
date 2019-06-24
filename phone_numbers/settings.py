@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4_d_&d#o8g098pf47!0_kldur@=qnj)ydeswk%z4u@@#--*3hd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["hugyy85.pythonanywhere.com"]
+ALLOWED_HOSTS = ["hugyy85.pythonanywhere.com", '127.0.0.1']
 
 
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'phone_numbers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'/home/hugyy85/hugyy85.pythonanywhere.com/templates'],
+        'DIRS': [r'C:\Users\Anton.b.PROXIMA\Desktop\Python\work\Proxima\django\phone_number_django-master\phone_number_django-master\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +125,6 @@ FILE_UPLOAD_HANDLERS = ["django.core.files.uploadhandler.MemoryFileUploadHandler
                          "django.core.files.uploadhandler.TemporaryFileUploadHandler"]
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

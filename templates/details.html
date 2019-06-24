@@ -1,12 +1,12 @@
 {% extends "main.html" %}
 
-{% block success %}
+{% block details %}
 <ul class="list-group">
     <li class="list-group-item list-group-item-action active ">Результаты</li>
-{% for key, value in dict.items %}
+{% for line in lines %}
     <ul class="list-group">
-        <a href="{{ key }}/" class="list-group-item list-group-item-action ">
-    {{ value.result }}
+        <a href="#/" class="list-group-item list-group-item-action ">
+    {{ line }}
   </a>
 
     </ul>

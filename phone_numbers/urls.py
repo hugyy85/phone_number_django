@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import phone_numbers.view
+from phone_numbers import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', phone_numbers.view.start),
     path('upload_file/', phone_numbers.view.upload_file),
-    path('success/url/', phone_numbers.view.success)
+    path('success/url/', phone_numbers.view.success),
+    path('success/url/<int:number>/', phone_numbers.view.show_details),
+    path('error/', phone_numbers.view.error),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
