@@ -58,7 +58,9 @@ ROOT_URLCONF = 'phone_numbers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\Anton.b.PROXIMA\Desktop\Python\work\Proxima\django\phone_number_django-master\phone_number_django-master\templates'],
+        'DIRS': [
+            r'/home/hugyy85/hugyy85.pythonanywhere.com/templates',
+            r'C:\Users\Anton.b.PROXIMA\Desktop\Python\work\Proxima\django\phone_number_django-master\phone_number_django-master\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
